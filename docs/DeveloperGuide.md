@@ -6,6 +6,121 @@ title: Developer Guide
 {:toc}
 
 --------------------------------------------------------------------------------------------------------------------
+## user stories, glossary, NFRs, use cases
+
+
+### 1. Target User Profile, Value Proposition, and User Stories
+
+**Target User Profile**:
+- Computing majors at NUS looking for jobs or internships
+
+**Value Proposition**:
+- Efficient tracking of everything related to desired internships
+- Swift access to vital contacts
+- Clear and organized application and interview timelines
+
+**User Stories**:
+
+1. As a CS student, I can add companies that have openings to a list so I can keep track of what companies I can apply for internships at.
+2. As a CS student, I can delete company applications that I am no longer interested in so that my list of companies becomes less cluttered.
+3. As a CS student, I can view all company applications I am interested in so that I can get an understanding of what companies I have to apply at at a glance.
+4. As a CS student, I can add seniors’ contact information so I know who I can contact to find teammates for work on future projects
+5. As a CS student, I can add professors’ contact information so I know who I can contact to find help or ask questions about academic topics
+6. As a CS student, I can add the contacts of people I meet at networking events so I know who to contact when I am looking for an internship.
+7. As a CS student, I can view each of my contacts so I can look for their details.
+8. As a CS student, I can delete the contacts of people that I no longer need so that my list of people becomes less cluttered.
+
+*(These are a few selected user stories. Refer to the initial project notes for a comprehensive list.)*
+
+### 2. Use Cases
+
+**Use Case: Adding a New Company**
+
+1. **MSS (Main Success Scenario)**:
+    1. User requests to list companies.
+    2. SOCareers shows a list of companies.
+    3. User requests to add a certain company to the list.
+    4. SOCareers adds the company to the list.
+    5. SOCareers displays a message confirming the addition of the company.
+
+2. **Extensions**:
+    - 2a. The list is empty.
+        - Use case ends.
+
+---
+**Use Case: Deleting a Company**
+
+1. **MSS (Main Success Scenario)**:
+    1. User requests to view the list of companies.
+    2. SOCareers shows a list of companies.
+    3. User requests to delete a certain company from the list.
+    4. SOCareers deletes the company from the list.
+    5. SOCareers displays a message confirming the deletion of the company.
+
+2. **Extensions**:
+    - 2a. The selected company is not in the list.
+        - 2a1. SOCareers shows an error message.
+        - Use case ends.
+
+---
+
+**Use Case: Viewing All Company**
+
+1. **MSS**:
+    1. User requests to view all company applications.
+    2. SOCareers displays a list of all companies the user has applied to or is interested in applying to.
+
+2. **Extensions**:
+    - 2a. The list is empty.
+        - 2a1. SOCareers shows a message indicating the list is empty.
+        - Use case ends.
+
+---
+
+**Use Case: Adding Contact Information**
+
+1. **MSS**:
+    1. User requests to add a contact information.
+    2. SOCareers asks for the details of the contact (name, contact information).
+    3. User inputs the details.
+    4. SOCareers adds the contact information to the contacts list.
+    5. SOCareers displays a message confirming the addition of the contact information.
+
+2. **Extensions**:
+    - 2a. User inputs invalid details.
+        - 2a1. SOCareers shows an error message.
+        - Use case resumes at step 2.
+
+---
+
+**Use Case: Deleting Contacts**
+
+1. **MSS**:
+    1. User requests to view contacts list.
+    2. SOCareers shows the list of contacts.
+    3. User requests to delete a certain contact from the list.
+    4. SOCareers deletes the contact from the list.
+    5. SOCareers displays a message confirming the deletion of the contact.
+
+2. **Extensions**:
+    - 2a. The selected contact is not in the list.
+        - 2a1. SOCareers shows an error message.
+        - Use case ends.
+
+
+### 3. Non-Functional Requirements
+
+- **Performance Requirements**: The app should be able to handle a list of up to 1000 companies and contacts.
+- **Usability Requirements**: The app should be usable by a person who is not proficient in tech. All commands should be executable within 3 clicks.
+- **Scalability Requirements**: The app should be able to run on standard laptops and desktops used by students.
+
+### 4. Glossary
+
+- **SOCareers**: An all-in-one application designed for CS majors at NUS to streamline the job and internship application process.
+- **MSS**: Main Success Scenario in use cases.
+- **User**: Refers to CS majors at NUS looking for jobs or internships.
+
+--------------------------------------------------------------------------------------------------------------------
 
 ## **Acknowledgements**
 
