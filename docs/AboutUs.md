@@ -24,7 +24,7 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 <img src="images/tim-siu.png" width="200px">
 
 [[github](http://github.com/tim-siu)]
-[[portfolio](team/shuyaoXu.md)]
+[[portfolio](team/tim-siu.md)]
 
 * Role: Developer
 * Responsibilities: Testing
