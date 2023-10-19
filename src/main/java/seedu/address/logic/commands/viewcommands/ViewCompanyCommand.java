@@ -36,7 +36,7 @@ public class ViewCompanyCommand extends ViewCommand {
             throw new CommandException(Messages.MESSAGE_INVALID_COMPANY_DISPLAYED_INDEX);
         }
 
-        Company companyToView = lastShownList.get(this.targetIndex.getZeroBased());
+        Company companyToView = lastShownList.get(targetIndex.getZeroBased());
         model.updateFilteredCompanyList(new ContactIsEqualsPredicate(companyToView));
         return new CommandResult(String.format(MESSAGE_SUCCESS, targetIndex.getOneBased()));
     }
