@@ -5,6 +5,7 @@ import static java.util.Objects.requireNonNull;
 import java.util.List;
 
 import seedu.address.commons.core.index.Index;
+import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.logic.Messages;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
@@ -35,7 +36,7 @@ public class ViewPersonCommand extends ViewCommand {
             throw new CommandException(Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
         }
 
-        Person personToView = lastShownList.get(this.targetIndex.getZeroBased());
+        Person personToView = lastShownList.get(targetIndex.getZeroBased());
         model.updateFilteredPersonList(new ContactIsEqualsPredicate(personToView));
         return new CommandResult(String.format(MESSAGE_VIEW_PERSON_SUCCESS, targetIndex.getOneBased()));
     }
@@ -53,5 +54,13 @@ public class ViewPersonCommand extends ViewCommand {
 
         ViewPersonCommand otherViewPersonCommand = (ViewPersonCommand) other;
         return this.targetIndex.equals(otherViewPersonCommand.getTargetIndex());
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .add("type", "Person")
+                .add("targetIndex", targetIndex)
+                .toString();
     }
 }
